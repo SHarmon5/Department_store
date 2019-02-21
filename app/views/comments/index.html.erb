@@ -1,0 +1,12 @@
+
+<p><%= @item.name %></p>
+<h2> Comments </h2>
+
+
+<% @item.comments.each do |comment| %>
+  <%= render 'comments/comment', { comment: comment} %>
+<% end%>
+
+<hr />
+<%= link_to 'Add A Comment', new_item_comment_path(@item) %>
+<%= link_to 'Back To Items', dept_items_path(@item, @dept) %>

@@ -1,0 +1,13 @@
+<h1>Add a comment</h1>
+<%= form_for [@item, @comment] do |f| %>
+  <hr>
+  <%= f.label :body %>
+  <%= f.text_area :body, required: true %>
+  <%= f.label :date %>
+  <%= f.datetime_field :created_at %></hr>
+  <br />
+  <%= f.label :author %>
+  <%= f.text_field :author, placeholder: 'Leave Blank To Remain Anonymous' %>
+  <br />
+  <%= f.submit %>
+<% end %>

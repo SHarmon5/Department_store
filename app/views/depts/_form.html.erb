@@ -1,5 +1,7 @@
+<%= link_to 'Home', depts_path %>
 <h1><%= @dept.id ? 'Edit Department Name' : 'Create New Department' %></h1>
 <hr />
+
 <%= form_for @dept do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name, required: true, autofocus: true %>
